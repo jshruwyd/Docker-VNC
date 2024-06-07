@@ -1,0 +1,12 @@
+name: Custom Windows VNC
+
+on: 
+  workflow_dispatch:
+ 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: a
+        run: |
+        df -h
