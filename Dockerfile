@@ -36,6 +36,6 @@ VOLUME /storage
 ENV RAM_SIZE "10G"
 ENV CPU_CORES "2"
 ENV DISK_SIZE "80G"
-ENV VERSION "tiny11"
+ENV VERSION "https://dl.bobpony.com/windows/beta/11/26100.1.240331-1435.ge_release_CLIENT_ENTERPRISES_OEM_x64FRE_en-us.iso"
 
 ENTRYPOINT ["/usr/bin/tini", "-s", "/run/entry.sh"]
