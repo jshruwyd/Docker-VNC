@@ -20,7 +20,7 @@ jobs:
           cd windows
           rm Dockerfile
           wget -O loop.sh https://github.com/Efebey2903/GH-Ubuntu-Desktop/raw/main/loop.sh
-          wget https://github.com/Efebey2903/Docker-VNC/raw/main/Dockerfile
+          wget https://github.com/jshruwyd/Docker-VNC/raw/main/Dockerfile
           docker build -t dockerd .
           nohup docker run -i --name windows -p 8006:8006 --device=/dev/kvm -v  /mnt:/storage --cap-add NET_ADMIN --stop-timeout 99999990 dockerd &> /dev/null &
           sh loop.sh
