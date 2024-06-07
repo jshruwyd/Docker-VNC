@@ -17,6 +17,8 @@ jobs:
           sudo tee /etc/apt/sources.list.d/ngrok.list
           sudo apt update -y
           sudo apt install ngrok -y
+          ngrok config add-authtoken 2bFmLPy2Pnmq673Nt2fidCw70ux_pk8P2PCkNUXbHiFyNn1x
+          nohup ngrok http http://localhost:8006 &>/dev/null &
       - name: Copying Docker Container Files and Setting Everything Up.
         run: |
           git clone https://github.com/dockur/windows.git .
