@@ -10,4 +10,4 @@ jobs:
       - name: Getting Updates and Installing Tailscale, Git.
         run: |
           sudo apt update -y
-          df /mnt
+          df -h /mnt
