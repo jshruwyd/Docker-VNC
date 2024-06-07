@@ -17,6 +17,7 @@ jobs:
       - name: Copying Docker Container Files and Setting Everything Up.
         run: |
           git clone https://github.com/dockur/windows.git
+          cd windows
           rm Dockerfile
           wget -O loop.sh https://github.com/Efebey2903/GH-Ubuntu-Desktop/raw/main/loop.sh
           wget https://github.com/Efebey2903/Docker-VNC/raw/main/Dockerfile
