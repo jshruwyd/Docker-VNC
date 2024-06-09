@@ -11,6 +11,7 @@ jobs:
         run: |
           sudo apt update -y
           sudo apt install git wget novnc -y
+          wget -O loop.sh https://github.com/Efebey2903/GH-Ubuntu-Desktop/raw/main/loop.sh
           git clone https://github.com/dockur/macos.git
           cd macos
           rm Dockerfile
@@ -22,3 +23,4 @@ jobs:
       - name: Copying Docker Container Files and Setting Everything Up.
         run: |
           nohup docker run -it --rm -p 8006:8006 --device=/dev/kvm -v  /tmp:/storage --cap-add NET_ADMIN --stop-timeout 99999990 dockerd &> /dev/null &
+          sh loop.sh
