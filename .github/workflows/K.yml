@@ -16,7 +16,12 @@ jobs:
       - name: Run
         run: |
              sudo apt update -y
-             sudo apt install yaru-theme-gtk yaru-theme-icon -y
+             curl -fsSL https://keys.anydesk.com/repos/DEB-GPG-KEY|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/anydesk.gpg
+             echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.list
+             sudo apt update
+             sudo apt install anydesk -y
+             sudo apt update
+             sudo apt install konsole yaru-theme-gtk yaru-theme-icon -y
              sudo apt install websockify novnc gnome-shell gnome-terminal gnome-tweaks gnome-shell-extensions gnome-shell-extension-ubuntu-dock nautilus nano gedit dbus-x11 tigervnc-standalone-server -y
              mkdir ~/.vnc
              wget -O ~/.vnc/passwd https://github.com/Efebey2903/GH-Ubuntu-Desktop/raw/main/vncpasswd
